@@ -1,0 +1,72 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  @include flex-center;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  &.visible {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+  }
+  .w-pop {
+    background: #fff;
+    position: relative;
+    width: 40em;
+    max-width: 100%;
+    padding: 2em;
+    text-align: center;
+    @include flex-center;
+    flex-direction: column;
+    min-height: 14em;
+    border-radius: 10px;
+    .cerrar-pop {
+      position: absolute;
+      top: .6em;
+      right: .8em;
+      color: $color-gris;
+      font-size: 1.4em;
+      cursor: pointer;
+      i {}
+    }
+    h2 {
+      font-size: 1.875em;
+      color: #1B2D40;
+      padding: 0 1em;
+      margin: 1.5em 0 1.5em;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.4em;
+    }
+    a.btn {
+      width: 300px;
+      max-width: 100%;
+      height: 2.9em;
+      padding-top: .8em;
+      margin: 0 .5em;
+    }
+    
+  }
+  @include respond-to(550px) {
+    top: 0;
+    align-items: flex-start;
+    .w-pop {
+      border-radius: 0 0 10px 10px;
+      .flex-center {
+        flex-wrap: wrap;
+        a {
+          width: 100%;
+          margin-bottom: 10px;
+          
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Librerias, Settings y Variables
+@import "lib/variables";
+@import "lib/mixins";
+
+// Elementos Base
+@import "base/fonts";
+@import "base/general";
+
+// Componentes
+@import "componentes/slider";
+@import "componentes/acordeon";
+
+//Layout
+@import "layout/header";
+@import "layout/home";
+@import "layout/interior";
+@import "layout/footer";

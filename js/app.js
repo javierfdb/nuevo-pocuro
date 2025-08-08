@@ -181,6 +181,43 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// TABS DETALLE TOUR
+document.addEventListener('DOMContentLoaded', function() {
+  const tourSection = document.querySelector('.tour');
+  
+  if (tourSection) {
+    const tabLinks = tourSection.querySelectorAll('.menu-tour a');
+    const tabPanels = tourSection.querySelectorAll('.panel-tour');
+    
+    function switchTab(event) {
+      event.preventDefault();
+      
+      // Solo hacer cambios si el tab clickeado no está activo
+      if (!this.classList.contains('activo')) {
+        // Remover clase activo de todos los tabs y paneles
+        tabLinks.forEach(link => link.classList.remove('activo'));
+        tabPanels.forEach(panel => panel.classList.remove('activo'));
+        
+        // Agregar clase activo al tab clickeado
+        this.classList.add('activo');
+        
+        // Mostrar el panel correspondiente
+        const targetPanelId = this.getAttribute('data-rel');
+        const targetPanel = document.getElementById(targetPanelId);
+        
+        if (targetPanel) {
+          targetPanel.classList.add('activo');
+        }
+      }
+    }
+    
+    // Agregar event listeners a cada tab
+    tabLinks.forEach(link => {
+      link.addEventListener('click', switchTab);
+    });
+  }
+});
+
 
 
   

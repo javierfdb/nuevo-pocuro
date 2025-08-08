@@ -51,6 +51,30 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    new Swiper(".bloques-detalle", {
+      loop: true,             // que se repita en bucle
+      speed: 800,             // velocidad de transición
+      slidesPerView: 3,
+      spaceBetween: 00,
+      autoplay: {
+        delay: 4000,          // cada 4 segundos
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
+
+
+
   });
 
 document.addEventListener('DOMContentLoaded', () => {

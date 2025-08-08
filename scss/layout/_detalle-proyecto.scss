@@ -1,0 +1,233 @@
+.portada-detalle {
+    position: relative;
+    height: 750px;
+    overflow-y: visible;
+    transform: translateY(-142px);
+    margin-bottom: -4rem;
+    .fondo-portada {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(.7);
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        .box-texto {
+            h2 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+                span {
+                    color: #fff;
+                    background: $azulT;
+                    padding: .2rem .4rem;
+                }
+            }
+            h1 {
+                color: #fff;
+                font-weight: 300;
+                font-size: 62px;
+                text-transform: uppercase;
+                margin: 0px;
+                margin-bottom: 2rem;
+            }
+        }
+        .box-datos {
+            min-width: 450px;
+            display: flex;
+            justify-content: space-between;
+            img {
+                margin-bottom: .5rem;
+            }
+            p {
+                color: #fff;
+                font-weight: bold;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .box-promo {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 75PX;
+        background: $azulT;
+        display: flex;
+        align-items: center;
+        H2 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0px;
+            img {
+                margin-right: .2rem;
+                transform: translateY(-4px);
+            }
+        }
+    }
+}
+
+.menu-detalle {
+    background: #fff;
+    width: 80%;
+    margin: 0px;
+    height: 142px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .box-menu-detalle {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 4rem;
+        ul {
+            width: 100%;
+            max-width: 1000px;
+            list-style: none;
+            padding-left: 0px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0px;
+            li {
+                a {
+                    display: inline-flex;
+                    text-transform: uppercase;
+                    color: $black18;
+                }
+            }
+        }
+    }
+}
+
+.swiper-bloques {
+    .swiper-slide {
+        width: 643px !important;
+        img {
+         width: 643px !important;  
+        }
+        .box-texto {
+            height: 100%;
+            position: absolute;
+            top: 30%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            h4 {
+                font-family: "Alex Brush", cursive;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 53px;
+                color: #fff;
+                margin-bottom: 2rem;
+            }
+            p {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+    .swiper-slide.azul img,
+    .swiper-slide.blanco_1 img,
+    .swiper-slide.negro img,
+    .swiper-slide.azul_oscuro img,
+    .swiper-slide.blanco_2 img {
+        visibility: hidden;
+    }
+    .swiper-slide.azul {
+        background: #005FAE;
+    }
+    .swiper-slide.blanco_1 {
+        background: #F2F2F2;
+    }
+    .swiper-slide.negro {
+        background: $black18;
+    }
+    .swiper-slide.azul_oscuro {
+        background: #073855;
+    }
+    .swiper-slide.blanco_2 {
+        background: #fff;
+    }
+
+    .swiper-slide.blanco_1,
+    .swiper-slide.blanco_2 {
+        .box-texto {
+            h4, p {
+                color: $black39;
+            }
+        }
+    }
+
+
+}
+
+.ubicacion {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    height: 669px;
+    .container-fluid {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      .box {
+          width: 50%;
+          &.dos {
+              img {
+                  width: 100%;
+              }
+          }
+      }
+    }
+    .box-texto {
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            color: $black39;
+            max-width: 90%;
+        }
+    }
+    .info-entorno {
+        display: flex;
+        flex-wrap: wrap;
+        h4 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            color: $black39;
+        }
+        .box-info {
+            width: 33%;
+            margin-bottom: 1rem;
+            p {
+                font-weight: bold;
+                font-size: 14px;
+                color: $black39;
+            }
+        }
+        
+    }
+    .como-llegar {
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            color: $black39; 
+        }
+    }
+}

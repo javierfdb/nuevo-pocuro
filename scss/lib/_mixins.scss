@@ -103,6 +103,12 @@ box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
 }
 
+@mixin media-between($min, $max) {
+  @media all and (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}
+
 @mixin respond-to($width) {
   @media only screen and (max-width: $width) {
     @content;

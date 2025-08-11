@@ -131,10 +131,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('toggleBuscador');
+  const toggleMobile = document.getElementById('toggleBuscadorMobile');
   const buscadorAvanzado = document.querySelector('.buscador-avanzado');
 
   if (toggle && buscadorAvanzado) {
     toggle.addEventListener('change', function () {
+      if (this.checked) {
+        buscadorAvanzado.style.display = 'flex'; // o 'block' según tu diseño
+      } else {
+        buscadorAvanzado.style.display = 'none';
+      }
+    });
+  }
+  if (toggleMobile && buscadorAvanzado) {
+    toggleMobile.addEventListener('change', function () {
       if (this.checked) {
         buscadorAvanzado.style.display = 'flex'; // o 'block' según tu diseño
       } else {
@@ -216,6 +226,23 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', switchTab);
     });
   }
+});
+
+// MENU MOBILE
+document.addEventListener("DOMContentLoaded",()=>{
+  const btnMenu = document.querySelector('.btn-menu-mobile');
+  const menuMobile = document.querySelector('header .box-nav');
+  btnMenu?.addEventListener('click',e => {
+    e.preventDefault();
+    btnMenu.classList.toggle('open');
+    menuMobile.classList.toggle('visible');
+  });
+  // const items = document.querySelectorAll('.item-vida');
+  // items.forEach(item=>{
+  //   item.addEventListener("click",()=>{
+  //     item.classList.toggle('visible');
+  //   });
+  // })
 });
 
 

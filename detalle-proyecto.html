@@ -284,7 +284,7 @@
 <!-- ref: https://dev-pocuronew.lfi.cl/proyecto/jard%C3%ADn-del-valle-ii -->
 <section id="_plantas" class="plantas plantas_v2" data-version="1">
     <div class="container">
-       <h3>Modelos</h3>
+       <h2>Modelos</h2>
        <div class="w-plantas">
           <div class="menu-plantas">
              <div class="item-menu">
@@ -2225,7 +2225,7 @@
     #_plantas.plantas.plantas_v2 .container .w-plantas .menu-plantas a.activo:after {
        content: "";
        position: absolute;
-       bottom: -6px;
+       bottom: -5px;
        left: 0;
        width: 100%;
        height: 2.5px;
@@ -2305,20 +2305,20 @@
     }
  
     #_plantas.plantas.plantas_v2 .container .w-plantas .c-plantas .nuevo-wrap-plantas .nuevo-box-datos .splide__pagination--custom button {
- 
         font-size: 14px;
         color: #073855;
-        font-weight: 500;
+        font-weight: 400;
+        text-decoration: none;
     }
- 
-    #_plantas.plantas.plantas_v2 .container .w-plantas .c-plantas .splide__pagination__page.is-active {
-       transform: scale(1);
+
+    #_plantas.plantas.plantas_v2 .container .w-plantas .c-plantas .nuevo-wrap-plantas .nuevo-box-datos .splide__pagination--custom button.is-active {
+      transform: scale(1);
        text-decoration: underline;
     }
  
     #_plantas.plantas.plantas_v2 .container .w-plantas .c-plantas .splide__pagination__page .item-menu-modelos img {
        margin-right: .2rem;
-       transform: translateY(4px);
+       transform: translateY(-1px);
     }
  
     #_plantas.plantas.plantas_v2 .container .w-plantas .c-plantas .nuevo-wrap-plantas .nuevo-box-datos .splide__arrows {
@@ -2328,6 +2328,54 @@
     #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .splide .detalles-proy .container {
         padding: 0px;
     }
+
+    #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos .form-group select {
+    width: 100%;
+    font-weight: 300;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-image: url(https://dev-pocuronew.lfi.cl/ResourcePackages/Pocuro/assets/dist/images/bg-select2.png);
+    background-size: auto .55rem;
+    background-position: calc(100% - .5rem) center;
+    background-color: #fafafa;
+    border-radius: 0;
+    border: none;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding: .3rem .8rem .2rem;
+}
+
+#_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos .lista-car .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: .2rem;
+}
+
+#_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos .lista-car .item span {
+    display: block;
+    width: 1.66rem;
+    text-align: center;
+    margin-right: .4rem;
+}
+
+#_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos .botones .btn {
+    min-height: 2.5rem;
+    font-size: 0.66rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    min-width: 9.3rem;
+    display: inline-block;
+    text-align: center;
+    background: rgb(0, 95, 174);
+    padding: 0.9rem 1.2rem 0.7rem;
+    border-radius: 0px;
+    margin-top: 1.5rem;
+}
  </style>
 
 <style>

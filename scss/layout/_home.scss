@@ -444,6 +444,9 @@
         }
         select {
           height: 55px;
+          @include respond-to(991px) {
+            margin-bottom: 1rem;
+          } 
         }
       }
       .buscador-avanzado {
@@ -520,12 +523,25 @@
     }
   }
 
+.box-switch {
+  display: flex;
+  align-items: center;
+}
+
+.box-switch p {
+  margin-bottom: 0px;
+  color: $black39;
+  font-size: 14px;
+  font-weight: 700;
+}
+
   /* Estilo del contenedor */
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 5px;
+  margin-right: 1rem;
 }
 
 /* Oculta el checkbox */
@@ -574,5 +590,21 @@
 .switch input:checked + .slider::before {
   transform: translateX(24px);
 }
+
+.switch-mobile {
+  @include respond-to-desk(991px) {
+    display:none;
+  } 
+}
+
+.switch-desk {
+  @include respond-to(991px) {
+    display:none;
+  } 
+}
+
+
+
+
 }
 

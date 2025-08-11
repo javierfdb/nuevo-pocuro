@@ -462,3 +462,31 @@ section.ubicacion {
         }
     }
 }
+
+#_plantas.plantas.plantas_v2 {
+    padding: 4rem 0rem;
+}
+
+#_plantas.plantas.plantas_v2 .container h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    color: #005FAE;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#_plantas.plantas.plantas_v2 .w-plantas .menu-plantas a {
+    font-size: .77rem;
+    font-weight: 300;
+    color: #393939;
+    display: block;
+    padding: 1rem .6rem;
+    text-align: center;
+}
+
+#_plantas.plantas.plantas_v2 .w-plantas .menu-plantas a.activo {
+    color: #005fae;
+    font-weight: 700;
+    background: #fff;
+}

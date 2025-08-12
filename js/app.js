@@ -1,21 +1,5 @@
-// window.addEventListener('DOMContentLoaded', (event) => {
-//   const existeSlideHome = document.getElementById('slide-home');
-//   if (!existeSlideHome) return;
-
-//   const splide = new Splide('#slide-home', {
-//     type: 'slide',
-//     arrows: true,
-//     pagination: false,
-//     speed: 800,
-//     autoplay: true, 
-//     interval: 4000,      
-//     pauseOnHover: true,   
-//   });
-
-//   splide.mount();
-// });
-
- document.addEventListener('DOMContentLoaded', function () {
+// CONTROLADORES SLIDERS
+document.addEventListener('DOMContentLoaded', function () {
     new Swiper(".mySwiper", {
       loop: true,             // que se repita en bucle
       speed: 800,             // velocidad de transición
@@ -91,12 +75,32 @@
       },
     });
 
+    new Swiper(".bloques-detalle-mobile", {
+      loop: true,             // que se repita en bucle
+      speed: 800,             // velocidad de transición
+      slidesPerView: 1,
+      spaceBetween: 00,
+      autoplay: {
+        delay: 4000,          // cada 4 segundos
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
 
 
 
-  });
 
+});
+
+// PLAY HOVER VIDEOS
 document.addEventListener('DOMContentLoaded', () => {
   const containers = document.querySelectorAll('.media-container');
 
@@ -118,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// SUBMENU HEADER
 document.addEventListener('DOMContentLoaded', function () {
   const toggles = document.querySelectorAll('.submenu-toggle');
 
@@ -149,22 +154,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// BTN BUSCADOR AVANZADO
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('toggleBuscador');
-  const toggleMobile = document.getElementById('toggleBuscadorMobile');
   const buscadorAvanzado = document.querySelector('.buscador-avanzado');
-
-  if (toggle && buscadorAvanzado) {
+  if (buscadorAvanzado) {
     toggle.addEventListener('change', function () {
-      if (this.checked) {
-        buscadorAvanzado.style.display = 'flex'; // o 'block' según tu diseño
-      } else {
-        buscadorAvanzado.style.display = 'none';
-      }
-    });
-  }
-  if (toggleMobile && buscadorAvanzado) {
-    toggleMobile.addEventListener('change', function () {
       if (this.checked) {
         buscadorAvanzado.style.display = 'flex'; // o 'block' según tu diseño
       } else {
@@ -174,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// ANCLA AL TOP
 document.addEventListener('DOMContentLoaded', function () {
   const toUpButton = document.getElementById('toUp');
 
@@ -265,6 +261,77 @@ document.addEventListener("DOMContentLoaded",()=>{
   // })
 });
 
+// ANCLAS DETALLE
+document.addEventListener('DOMContentLoaded', function () {
+  // Código para el botón "toUp" - solo si existe
+  const toUpButton = document.getElementById('toUp');
+  if (toUpButton) {
+    toUpButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      smoothScrollTo(0);
+    });
+  }
+
+  // Código para los anclas - solo si existen
+  const links = document.querySelectorAll("a.ancla");
+  if (links.length > 0) {  // Verifica que haya al menos un enlace
+    for (const link of links) {
+      link.addEventListener("click", clickHandler);
+    }
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    if (!href) return;  // Verifica que el href exista
+    
+    const targetElement = document.querySelector(href);
+    if (!targetElement) return;  // Verifica que el elemento objetivo exista
+    
+    const offsetTop = targetElement.offsetTop - 150;
+    smoothScrollTo(offsetTop);
+  }
+
+  function smoothScrollTo(targetPosition) {
+    let scrolling = true;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let startTime = null;
+
+    const animation = (currentTime) => {
+      if (!scrolling) return;
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    function easeInOutQuad(t, b, c, d) {
+      t /= d/2;
+      if (t < 1) return c/2*t*t + b;
+      t--;
+      return -c/2 * (t*(t-2) - 1) + b;
+    }
+
+    const cancelScroll = () => {
+      scrolling = false;
+      window.removeEventListener('wheel', cancelScroll);
+      window.removeEventListener('touchstart', cancelScroll);
+      window.removeEventListener('keydown', cancelScroll);
+    };
+
+    window.addEventListener('wheel', cancelScroll, { passive: true });
+    window.addEventListener('touchstart', cancelScroll, { passive: true });
+    window.addEventListener('keydown', cancelScroll);
+
+    requestAnimationFrame(animation);
+  }
+});
 
 
   

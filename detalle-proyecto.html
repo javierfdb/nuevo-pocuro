@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/aos.min.css"/>
-    <!-- <link rel="stylesheet" href="css/splide.min.css"> -->
+    <link rel="stylesheet" href="css/splide.min.css">
     <link href="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/css/vendors/splide.min.css" media="all" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/vendors/splide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -22,70 +22,73 @@
 <body>
 <!-- HEADER -->
 <header>
-    <div class="container">
-        <div class="box-logo">
-            <figure>
-                <img src="images/logo-pocuro-header.svg" alt="">
-            </figure>
-        </div>
-        <div class="box-nav">
-            <ul>
-                <li>
-                    <a href="#">Proyectos</a>
-                </li>
-                <li>
-                    <a href="#">Inversionistas</a>
-                </li>
-                <li class="has-submenu">
-                    <a href="#" class="submenu-toggle">
-                      Cómo comprar
-                      <img src="images/icons/icon-arrow-down.svg" alt="">
-                    </a>
-                    <ul class="submenu">
-                      <li><a href="#">Cómo comprar</a></li>
-                      <li><a href="#">Subsidio ds19</a></li>
-                      <li><a href="#">simular crédito</a></li>
-                    </ul>
-                  </li>
-            </ul>
-        </div>
-        <div class="box-postventa">
-            <div class="box-lupa">
-                <button>
-                    <img src="images/icons/icon-lupa.svg" alt="">
-                </button>
-            </div>
-            <a href="#">Post Venta</a>
-        </div>
-    </div>
+   <div class="container">
+       <div class="box-logo">
+           <figure>
+               <img src="images/logo-pocuro-header.svg" alt="">
+           </figure>
+       </div>
+       <div class="box-nav">
+           <ul>
+               <li>
+                   <a href="#">Proyectos</a>
+               </li>
+               <li>
+                   <a href="#">Inversionistas</a>
+               </li>
+               <li class="has-submenu">
+                   <a href="#" class="submenu-toggle">
+                     Cómo comprar
+                     <img src="images/icons/icon-arrow-down.svg" alt="">
+                   </a>
+                   <ul class="submenu">
+                     <li><a href="#">Cómo comprar</a></li>
+                     <li><a href="#">Subsidio ds19</a></li>
+                     <li><a href="#">simular crédito</a></li>
+                   </ul>
+                 </li>
+                 <li><a href="#" class="only-mob">Subsidio ds19</a></li>
+                 <li><a href="#" class="only-mob">simular crédito</a></li>
+           </ul>
+       </div>
+       <div class="box-postventa">
+           <div class="box-lupa">
+               <button>
+                   <img src="images/icons/icon-lupa.svg" alt="">
+               </button>
+           </div>
+           <a href="#">Post Venta</a>
+           <div id="btnMenuMobile" class="btn-menu-mobile"><span></span><span></span><span></span></div>
+       </div>
+   </div>
 </header>
 <!-- FIN HEADER -->
 
-<!-- <div class="container-fluid menu-detalle">
+<div class="container-fluid menu-detalle">
     <div class="box-menu-detalle">
         <ul>
             <li>
-                <a href="#">Características</a>
+                <a class="ancla" href="#bloqueInfo">Características</a>
             </li>
             <li>
-                <a href="#">Ubicación</a>
+                <a class="ancla" href="#sectionUbicacion">Ubicación</a>
             </li>
             <li>
-                <a href="#">Tour virtual</a>
+                <a class="ancla" href="#tourVirtual">Tour virtual</a>
             </li>
             <li>
-                <a href="#">Master plan</a>
+                <a class="ancla" href="#masterPlan">Master plan</a>
             </li>
             <li>
-                <a href="#">Modelos</a>
+                <a class="ancla" href="#_plantas">Modelos</a>
             </li>
             <li>
-                <a href="#">Contacto</a>
+                <a class="ancla" href="#contactoEjecutivo">Contacto</a>
             </li>
         </ul>
         <button class="btn-azul">Cotizar</button>
     </div>
-</div> -->
+</div>
 
 <section class="portada-detalle">
     <img src="images/img-portada-detalle.jpg" alt="" class="fondo-portada">
@@ -120,9 +123,10 @@
     </div>
 </section>
 
-<section class="swiper-bloques">
+<section class="swiper-bloques" id="bloqueInfo">
     <div class="container-fluid">
-        <div class="swiper bloques-detalle">
+        <!-- SWIPER DESK -->
+        <div class="swiper bloque-desk bloques-detalle">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
@@ -139,7 +143,7 @@
                     <img src="images/img-bloques-1.png" alt="">
                 </div>
                 <!-- TRES -->
-                <!-- <div class="swiper-slide blanco_1">
+                <div class="swiper-slide blanco_1">
                     <img src="images/img-bloques-1.png" alt="">
                     <div class="box-texto">
                         <h4>Una gran inversión</h4>
@@ -175,16 +179,92 @@
                         <h4>Una gran inversión</h4>
                         <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad.</p>
                     </div>
-                </div>  -->
+                </div> 
+
             </div>
-          </div>
+        </div>
+        <!-- SWIPER DESK -->
     </div>
+    <div class="container">
+      <!-- SWIPER MOB -->
+      <div class="swiper bloque-mob bloques-detalle-mobile">
+            <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                     <div class="swiper-slide-child">
+                        <img src="images/img-bloques-1.png" alt="">
+                     </div>
+                     <div class="swiper-slide-child azul">
+                        <img src="images/img-bloques-1.png" alt="">
+                        <div class="box-texto">
+                              <h4>Una gran inversión</h4>
+                              <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad.</p>
+                        </div>
+                     </div>
+                  </div>
+
+               <div class="swiper-slide">
+                  <div class="swiper-slide-child">
+                     <img src="images/img-bloques-1.png" alt="">
+                  </div>
+                  <div class="swiper-slide-child blanco_1">
+                     <img src="images/img-bloques-1.png" alt="">
+                     <div class="box-texto">
+                           <h4>Una gran inversión</h4>
+                           <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus dolorum, impedit aliquam ipsum rem vitae nulla nisi dolores commodi voluptate.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="swiper-slide-child">
+                     <img src="images/img-bloques-1.png" alt="">
+                  </div>
+                  <div class="swiper-slide-child negro">
+                     <img src="images/img-bloques-1.png" alt="">
+                     <div class="box-texto">
+                           <h4>Una gran inversión</h4>
+                           <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad.</p>
+                     </div>
+                  </div>
+               </div>   
+
+               <div class="swiper-slide">
+                  <div class="swiper-slide-child">
+                     <img src="images/img-bloques-1.png" alt="">
+                  </div>
+                  <div class="swiper-slide-child azul_oscuro">
+                     <img src="images/img-bloques-1.png" alt="">
+                     <div class="box-texto">
+                           <h4>Una gran inversión</h4>
+                           <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="swiper-slide-child">
+                     <img src="images/img-bloques-1.png" alt="">
+                  </div>
+                  <div class="swiper-slide-child blanco_2">
+                     <img src="images/img-bloques-1.png" alt="">
+                     <div class="box-texto">
+                           <h4>Una gran inversión</h4>
+                           <p>Condominio Altos de Lircay está emplazado en un sector de alta plusvalía frente a la U. de Talca, lo que lo convierte en la combinación perfecta entre equipamiento conectividad y calidad. La mejor decisión para invertir y disfrutar tu vida con tranquilidad.</p>
+                     </div>
+                  </div> 
+               </div>       
+               
+            </div>
+         </div>
+      <!-- SWIPER MOB -->
+      </div>
 </section>
 
-<section class="ubicacion">
+<section class="ubicacion" id="sectionUbicacion">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 box-01">
                 <div class="box-texto">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero facilis aliquid sunt! Dolor ab harum quaerat hic nemo, recusandae itaque expedita incidunt, voluptatum magni voluptate eos maxime non veritatis iste adipisci assumenda at blanditiis praesentium minus eligendi temporibus mollitia. Quaerat?</p>
                 </div>
@@ -214,8 +294,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6">
-                
+            <div class="col-lg-6 box-02">
+               <img src="images/img-ref-map.png" alt="">
             </div>
         </div>
     </div>
@@ -228,7 +308,7 @@
     
 </section>
 
-<section class="tour">
+<section class="tour" id="tourVirtual">
     <div class="container">
        <h2>Tour Virtual</h2>
        <div class="w-tour">
@@ -2278,12 +2358,25 @@
     #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .splide {
         width: 60%;
     }
+
+    @media screen and (max-width: 991px) {
+      #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .splide {
+        width: 100%;
+      }
+    }
+
  
     #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos {
         width: 40% !important;
         padding: 1rem;
         background: #fff;
     }
+
+    @media screen and (max-width: 991px) {
+      #_plantas.plantas.plantas_v2 .w-plantas .c-plantas .datos {
+        width: 100% !important;
+      }
+    }  
  
     #_plantas.plantas.plantas_v2  .w-plantas .c-plantas .datos .lista-car .item.uni-disponible p {
        font-size: 13px;
@@ -2392,10 +2485,10 @@
 
 <section id="contactoEjecutivo" class="contacto-ejecutivo">
     <div class="container">
+       <h2>Habla con un ejecutivo</h2>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 box-01">
                 <div class="box-datos">
-                    <h2>Habla con un ejecutivo</h2>
                     <span><img src="images/icons/IC-Location-blue.svg" alt="">Dirección Sala de Venta</span>
                     <p>Av. Lircay 3265, Talca</p>
 
@@ -2413,7 +2506,7 @@
                     <p>Condominio Alcazar - Pocuro</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 box-02">
                  <div class="cont-personas">
                     <div class="eje">
                         <div class="box-01">
@@ -2455,92 +2548,86 @@
     </div>
 </section>
 
-
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 mb-4">
-                <figure>
-                    <img src="images/logo-pocuro-white.svg" alt="">
-                </figure>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 box-1">
-                    <h4>Casa Matriz</h4>
-                    <ul>
-                        <li>Nueva de Lyon 145, Piso 13, Providencia</li>
-                        <li><a href="tel:+56224849700">(+56) 2 248 49 700</a></li>
-                        <li><a href="mailto:consultas@pocuro.cl">consultas@pocuro.cl</a></li>
-                    </ul>
-                    <div class="box-rrss-footer">
-                        <a href="#">
-                            <img src="images/icons/icon-facebook.svg" alt="">
-                        </a>
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12 mb-4">
+               <figure>
+                   <img src="images/logo-pocuro-white.svg" alt="">
+               </figure>
+           </div>
+           <div class="row">
+               <div class="col-lg-3 box-1">
+                   <h4>Casa Matriz</h4>
+                   <ul>
+                       <li> <img src="images/icons/icon-location.svg" alt=""> Nueva de Lyon 145, Piso 13, Providencia</li>
+                       <li><a href="tel:+56224849700"><img src="images/icons/icon-tel.svg" alt=""> (+56) 2 248 49 700</a></li>
+                       <li><a href="mailto:consultas@pocuro.cl"> <img src="images/icons/icon-email-footer.svg" alt=""> consultas@pocuro.cl</a></li>
+                   </ul>
+                   <div class="box-rrss-footer">
+                       <a href="#">
+                           <img src="images/icons/icon-facebook.svg" alt="">
+                       </a>
 
-                        <a href="#">
-                            <img src="images/icons/icon-instagram.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="images/icons/icon-linkedin.svg" alt="">
-                        </a>                      
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Sobre nosotros</h4>
-                    <ul>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Misión y visión</a></li>
-                        <li><a href="#">¿Cómo comprar?</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Proyectos construidos</a></li>
-                        <li><a href="#">Trabaja con nosotros</a></li>
-                        <li><a href="#">Proveedores / contratistas</a></li>
-                        <li><a href="#">Modelo prevención de delitos</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Encontrar bases legales</h4>
-                    <ul>
-                        <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="#">Contáctate con nosotros</a></li>
-                        <li><a href="#">Trabaja con nosotros</a></li>
-                        <li><a href="#">Vende tu terreno</a></li>
-                        <li><a href="#">Post venta</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Pocuro</h4>
-                    <ul>
-                        <li><a href="#">Centros de Información Pocuro</a></li>
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Definición Superficies</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 box-legal-footer">
-                    <p>Inmobiliaria Pocuro, vende sus viviendas en forma directa, en sus oficinas comerciales o salas de venta, especificadas en su página web; sin intermediarios, corredores de propiedades o comisionistas. Sus oficinas y salas de venta NO reciben dinero en EFECTIVO ni CHEQUES.</p>
-                </div>
-            </div>
-        </div>
-        <div class="box-img-up">
-            <button id="toUp">
-                <img src="images/img-to-up.svg" alt="">
-            </button>
-        </div>
-    </div>
+                       <a href="#">
+                           <img src="images/icons/icon-instagram.svg" alt="">
+                       </a>
+                       <a href="#">
+                           <img src="images/icons/icon-linkedin.svg" alt="">
+                       </a>                      
+                   </div>
+               </div>
+               <div class="col-lg-3">
+                   <h4>Sobre nosotros</h4>
+                   <ul>
+                       <li><a href="#">Historia</a></li>
+                       <li><a href="#">Misión y visión</a></li>
+                       <li><a href="#">¿Cómo comprar?</a></li>
+                       <li><a href="#">Proyectos</a></li>
+                       <li><a href="#">Blog</a></li>
+                       <li><a href="#">Proyectos construidos</a></li>
+                       <li><a href="#">Trabaja con nosotros</a></li>
+                       <li><a href="#">Proveedores / contratistas</a></li>
+                       <li><a href="#">Modelo prevención de delitos</a></li>
+                   </ul>
+               </div>
+               <div class="col-lg-3">
+                   <h4>Encontrar bases legales</h4>
+                   <ul>
+                       <li><a href="#">Preguntas frecuentes</a></li>
+                       <li><a href="#">Contáctate con nosotros</a></li>
+                       <li><a href="#">Trabaja con nosotros</a></li>
+                       <li><a href="#">Vende tu terreno</a></li>
+                       <li><a href="#">Post venta</a></li>
+                   </ul>
+               </div>
+               <div class="col-lg-3">
+                   <h4>Pocuro</h4>
+                   <ul>
+                       <li><a href="#">Centros de Información Pocuro</a></li>
+                       <li><a href="#">Aviso Legal</a></li>
+                       <li><a href="#">Definición Superficies</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-12 box-legal-footer">
+                   <p>Inmobiliaria Pocuro, vende sus viviendas en forma directa, en sus oficinas comerciales o salas de venta, especificadas en su página web; sin intermediarios, corredores de propiedades o comisionistas. Sus oficinas y salas de venta NO reciben dinero en EFECTIVO ni CHEQUES.</p>
+               </div>
+           </div>
+       </div>
+       <div class="box-img-up">
+           <button id="toUp">
+               <img src="images/img-to-up.svg" alt="">
+           </button>
+       </div>
+   </div>
 </footer>
 
-<!-- <script src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/jquery-3.4.1.min.js" ></script> -->
-<!-- <script src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/bundle.libs.min.js" ></script> -->
-<!-- <script src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/funciones.js?v=1" ></script> -->
-<!-- <script src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/funciones-widget.js?v=1.3" ></script> -->
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="https://pocuro.cl/ResourcePackages/Pocuro/assets/dist/js/vendors/slick.min.js"></script>
 <script src="js/aos.min.js"></script>
 <script src="js/all.min.js"></script>
-<!-- <script src="js/splide.min.js"></script> -->
+<script src="js/splide.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 

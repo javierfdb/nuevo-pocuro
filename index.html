@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/aos.min.css"/>
-    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Alex+Brush&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -116,123 +115,98 @@
 
 <section class="buscador-proyectos">
     <div class="container">
-        <div class="box-buscador">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Encuentra tu futuro hogar</h2>
-                </div>
-            </div>
-            <div class="row box-inputs">
-                <div class="col-lg-5">
-                    <label for="">Tipo de propiedad</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                </div>
-
-                <div class="col-lg-5">
-                    <label for="">Región</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                </div>
-
-                <!-- <div class="col-lg-12 switch-mobile">
-                    <div class="box-switch">
-                        <label class="switch">
-                        <input type="checkbox" id="toggleBuscadorMobile">
-                        <span class="slider"></span>
-                        </label>
-                        <p>Búsqueda avanzada</p>
-                    </div>
-                </div> -->
-
-               <div class="col-lg-2 box-buscar">
-                    <label for="" class="invisible">Buscar</label>
-                    <button class="btn-azul">
-                        Buscar
-                    </button>
-               </div>
-
-               <div class="col-lg-12 box-switch pt-4">
+       <div class="box-buscador form-busqueda">
+          <div class="row">
+             <div class="col-lg-12">
+                <h2>Encuentra tu futuro hogar</h2>
+             </div>
+          </div>
+          <div class="row box-inputs">
+             <div class="col-lg-5">
+                <label for="">Tipo de propiedad</label>
+                <select class="form-select" aria-label="Default select example" id="select_tipo_propiedad">
+                   <option selected="selected" value="0">Seleccione</option>
+                   <option value="2">Departamento</option>
+                   <option value="1">Casa</option>
+                </select>
+             </div>
+             <div class="col-lg-5">
+                <label for="">Región</label>
+                <select class="form-select" aria-label="Default select example" id="select_comunas">
+                   <option selected="selected" value="0">Seleccione</option>
+                </select>
+             </div>
+             <div class="col-lg-2 box-buscar btn-busqueda">
+                <label for="" class="invisible">Buscar</label>
+                <button class="btn-azul" id="btnBuscar">
+                Buscar
+                </button>
+             </div>
+             <div class="col-lg-12 box-switch pt-4">
                 <div class="box-switch">
-                  <label class="switch">
-                      <input type="checkbox" id="toggleBuscador">
-                      <span class="slider"></span>
-                    </label>
-                    <p>Búsqueda avanzada</p>
+                   <label class="switch">
+                   <input type="checkbox" id="toggleBuscador">
+                   <span class="slider"></span>
+                   </label>
+                   <p>Búsqueda avanzada</p>
                 </div>
-               </div>
-
-               <div class="box-ba row m-0 p-0 buscador-avanzado">
+             </div>
+             <div class="box-ba row m-0 p-0 buscador-avanzado">
                 <div class="col-lg-3 inputs-precio">
-                    <label for="">Precio</label>
-                    <div class="box-inputs-1">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Desde (UF)" aria-label="Desde (UF)" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Hasta (UF)" aria-label="Hasta (UF)" aria-describedby="basic-addon1">
-                          </div>
-                    </div>
+                   <label for="">Precio</label>
+                   <div class="box-inputs-1">
+                      <div class="input-group mb-3">
+                         <input type="text" class="form-control" placeholder="Desde (UF)" aria-label="Desde (UF)" aria-describedby="basic-addon1" id="precio_desde">
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="text" class="form-control" placeholder="Hasta (UF)" aria-label="Hasta (UF)" aria-describedby="basic-addon1" id="precio_hasta">
+                      </div>
+                   </div>
                 </div>
                 <div class="col-lg-3 inputs-caracteristicas">
-                    <div class="box-inputs-2">
-                        <div class="cont-select">
-                            <label for="">Dormitorios</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>0</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="cont-select">
-                            <label for="">Baños</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>0</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
+                   <div class="box-inputs-2">
+                      <div class="cont-select">
+                         <label for="">Dormitorios</label>
+                         <select class="form-select" aria-label="Default select example" id="select_dormitorios">
+                            <option selected="selected" value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4">3</option>
+                            <option value="8">4</option>
+                         </select>
+                      </div>
+                      <div class="cont-select">
+                         <label for="">Baños</label>
+                         <select class="form-select" aria-label="Default select example" id="select_banos">
+                            <option selected="selected" value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4">3</option>
+                            <option value="8">4</option>
+                         </select>
+                      </div>
+                   </div>
                 </div>
                 <div class="col-lg-2 box-inputs-3">
-                    <label for="">Etapa del proyecto </label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>0</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                   <label for="">Etapa del proyecto </label>
+                   <select class="form-select" aria-label="Default select example" id="select_etapas">
+                      <option selected="selected" value="0">Seleccione</option>
+                      <option value="1081912d-fa99-4d9c-9090-cc13dd69c32e">En Verde</option>
+                      <option value="b9bd4b33-fe7b-4961-ab2c-c2e061dfca5a">Entrega Inmediata</option>
+                      <option value="80294d3b-8304-4112-8093-f6a40219809f">Nuevo Proyecto</option>
+                   </select>
                 </div>
                 <div class="col-lg-2 box-inputs-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="myCheckbox">
-                        <label class="form-check-label" for="myCheckbox">
-                          Proyectos con subsidio
-                        </label>
-                      </div>
+                   <div class="form-check">
+                      <input class="form-check-input check" type="checkbox" value="" id="subsidio">
+                      <label class="form-check-label" for="myCheckbox">
+                      Proyectos con subsidio
+                      </label>
+                   </div>
                 </div>
-               </div>
-
-              
-
-            </div>
-
-
-            
-          
-           
-            
-        </div>
+             </div>
+          </div>
+       </div>
     </div>
 </section>
 
@@ -699,9 +673,7 @@
 </footer>
 
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/aos.min.js"></script>
 <script src="js/all.min.js"></script>
-<script src="js/splide.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 

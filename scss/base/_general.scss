@@ -341,6 +341,14 @@ a:hover {
 .titulo {
   h2 {
     text-align: center;
+    @include respond-to(576px) {
+      font-size: 38px;
+    } 
+  }
+  &.fix-mob {
+    @include respond-to(991px) {
+      margin-top: 0px !important;
+    } 
   }
 }
 

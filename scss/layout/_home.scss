@@ -111,6 +111,9 @@
             flex: 1;
             align-items: center;
             width: 100%;
+            @include respond-to(576px) {
+              justify-content: space-between;
+            } 
             p {
               width: auto;
               padding: 0rem 1rem;
@@ -120,12 +123,22 @@
               min-height: 40px;
               font-weight: bold;
               color: $black39;
+              @include respond-to(576px) {
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                padding: 0rem .5rem;
+                flex: 1;
+              } 
               img {
                 margin-right: .3rem;
               }
               &.dato-tipo {
                 padding-left: 0px;
                 border-right: 1px solid #E5E7EA;
+                @include respond-to(991px) {
+                  padding-left: .5rem;
+                } 
                 img {
                   transform: translateY(-2px);
                 }
@@ -138,6 +151,10 @@
               }
               &.dato-mts {
                 border-right: 1px solid #E5E7EA;
+                
+                @include respond-to(576px) {
+                  white-space: nowrap;
+                } 
                 img {
                   transform: translateY(-1px);
                 }
@@ -162,6 +179,15 @@
   padding: 3rem 0rem;
   padding-bottom: 6rem;
   overflow-x: hidden;
+  @include respond-to(991px) {
+    padding-bottom: 2rem;
+  }
+  h2 {
+    @include respond-to(576px) {
+      font-size: 38px;
+      margin-bottom: 1rem;
+    } 
+  } 
   .box-pei {
     position: relative;
     margin-bottom: 2rem;
@@ -272,6 +298,9 @@
         flex: 1;
         align-items: center;
         width: 100%;
+        @include respond-to(991px) {
+          justify-content: space-around;
+        } 
         p {
           width: auto;
           padding: 0rem 1rem;
@@ -288,6 +317,12 @@
     top: 3rem;
     right: 20rem;
     transform: translateX(30rem);
+    @include respond-to(991px) {
+      position: relative;
+      top: unset;
+      right: unset;
+      transform: translateX(0rem);
+    } 
   }
   .box-datos {
     display: flex;
@@ -337,6 +372,27 @@
     }
 
   }
+  .container {
+    .box-ref {
+      @include respond-to(991px) {
+        display:none;
+      }
+    }
+  }
+  .container-fluid {
+    @include media-between(768px, 991px) {
+      max-width: 720px;
+    }
+    @include respond-to(991px) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    } 
+    @include respond-to(768px) {
+      max-width: 540px;
+    } 
+  }
 }
 
 .proyecto-single {
@@ -360,10 +416,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include respond-to(768px) {
+      justify-content: flex-start;
+      padding-top: 4rem;
+    }
     h4 {
       font-size: 32px;
       font-weight: bold;
       color: $white;
+      @include respond-to(768px) {
+        font-size: 28px;
+        margin-bottom: 0px;
+      }
     }
     h2 {
       font-size: 62px;
@@ -371,6 +435,9 @@
       text-transform: uppercase;
       margin: .5rem;
       color: $white;
+      @include respond-to(768px) {
+        font-size: 44px;
+      }
     }
     p {
       font-size: 18px;
@@ -389,14 +456,32 @@
       position: absolute;
       bottom: 0;
       height: 215px;
+      @include respond-to(768px) {
+        flex-direction: column;
+        height: unset;
+        bottom: 1.5rem;
+      } 
       .dor, .sup, .pri {
         border-right: 1px solid $white;
         padding-right: 2rem;
+        @include respond-to(768px) {
+          border-right: 0px;
+          border-bottom: 1px solid $white;
+        }
+      }
+      .pri {
+        @include respond-to(768px) {
+          border-bottom: 0px;
+        }
       }
       p {
         font-size: 30px;
         font-weight: bold;
         color: #fff;
+        @include respond-to(768px) {
+          font-size: 24px;
+          margin-bottom: 1rem;
+        }
         span {
           font-size: 36px;
         }
@@ -412,6 +497,9 @@
   transform: translateY(-3rem);
   z-index: 99;
   position: relative;
+  @include respond-to(579px) {
+    transform: translateY(-3.5rem);
+  } 
   .container {
     .box-buscador {
       padding-top: .5rem;
@@ -429,7 +517,7 @@
         color: $black39;
         font-weight: bold;
       }
-      .box-selects {
+      .box-inputs {
         display: flex;
         align-items: center;
         padding-top: .5rem;
@@ -438,9 +526,17 @@
           font-size: 16px;
           font-weight: bold;
           margin-bottom: .3rem;
+          @include respond-to(991px) {
+            &.invisible {
+              display: none !important;
+            }
+          } 
         }
         button {
           margin-top: 0rem;
+          @include respond-to(991px) {
+           width: 100%;
+        } 
         }
         select {
           height: 55px;
@@ -448,10 +544,27 @@
             margin-bottom: 1rem;
           } 
         }
+        .box-buscar {
+          @include respond-to(991px) {
+            order: 5;
+          }         
+        }
+        .box-switch {
+          @include respond-to(991px) {
+            order: 3;
+          } 
+        }
+        .box-ba {
+          @include respond-to(991px) {
+            order: 4;
+          } 
+        }
       }
       .buscador-avanzado {
         display: none;
-        margin-top: 1rem;
+        @include respond-to-desk(991px) {
+          margin-top: 1rem !important;
+        }
         .box-inputs-1 {
           display: flex;
           width: 100%;
@@ -486,28 +599,87 @@
             select {
               height: 55px;
               width: 90%;
+              @include respond-to(768px) {
+                width: 95%;
+              } 
             }
+          }
+          .cont-select:last-child {
+            @include respond-to(991px) {
+              transform: translateX(5px);
+            }
+            @include respond-to(768px) {
+              transform: translateX(5%);
+            } 
           }
         }
         .box-inputs-3 {
           select {
             height: 55px;
           }
+          label {
+            width: 100%;
+            text-align: left;
+            @include respond-to(991px) {
+              padding-left: 10px;
+            } 
+            @include respond-to(768px) {
+              padding-left: 0px;
+            }  
+          }
         }
         .box-inputs-4 {
           display: flex;
           align-items: center;
+          @include respond-to(991px) {
+            margin-bottom: 1rem;
+          }         
           label {
             font-size: 14px;
             margin-bottom: 0px;
             transform: translateY(2px);
           }
         }
+        .inputs-caracteristicas {
+          @include respond-to(991px) {
+            width: 67%;
+            padding-right: 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+          }
+          @include respond-to(768px) {
+            width: 100%;
+            padding-right: 20px;
+          }          
+        }
+        .box-inputs-3 {
+          @include respond-to(991px) {
+            width: 33%;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+          }   
+          @include respond-to(768px) {
+            width: 100%;
+            padding-left: 20px;
+          } 
+          select {
+            @include respond-to(991px) {
+             max-width: 176px;
+            } 
+            @include respond-to(768px) {
+              max-width: unset;
+            } 
+          }      
+        }
         label {
           color: $black39;
           font-size: 15px;
           font-weight: bold;
           margin-bottom: .3rem;
+          
         }
         .col-lg-3 {
           @include respond-to-desk(991px) {
@@ -520,12 +692,19 @@
           }
         }
       }
+
+
+
     }
   }
 
 .box-switch {
   display: flex;
   align-items: center;
+  @include respond-to(991px) {
+    padding-top: 0px !important;
+    margin-bottom: .5rem;
+ } 
 }
 
 .box-switch p {
@@ -592,16 +771,20 @@
 }
 
 .switch-mobile {
-  @include respond-to-desk(991px) {
-    display:none;
-  } 
+  margin-bottom: 1rem;
 }
 
-.switch-desk {
-  @include respond-to(991px) {
-    display:none;
-  } 
-}
+// .switch-mobile {
+//   @include respond-to-desk(991px) {
+//     display:none;
+//   } 
+// }
+
+// .switch-desk {
+//   @include respond-to(991px) {
+//     display:none;
+//   } 
+// }
 
 
 

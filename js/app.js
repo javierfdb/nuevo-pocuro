@@ -50,6 +50,26 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // pantallas desde 576px hasta 991px
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        // pantallas de 992px en adelante
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      },
     });
 
     new Swiper(".bloques-detalle", {

@@ -73,7 +73,7 @@
       max-height: 690px;
       // overflow: hidden;
       @include respond-to(576px) {
-        align-items: flex-end;
+        // align-items: center;
       } 
     figure {
       img {

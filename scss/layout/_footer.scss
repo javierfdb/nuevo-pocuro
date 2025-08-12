@@ -30,6 +30,11 @@ footer {
       position: absolute;
       display: flex;
       bottom: 1.2rem;
+      @include respond-to(991px) {
+        position: relative;
+        bottom: unset;
+        margin-bottom: 1.5rem;
+      } 
       img {
         margin-right: 3rem;
       }
